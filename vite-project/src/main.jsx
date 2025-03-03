@@ -19,7 +19,13 @@ import ReactDOM from 'react-dom/client'
 // import App from './App14.jsx'
 // import App from './App15.jsx';
 // import App from './App16.jsx';
+// import App from './App17.jsx';
+// import MyList from './MyList'
+// import MyTable from './MyTable'
+// import MyForm from './MyForm'
+import MyForm from './MyForm2'
 import './index.css'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -38,5 +44,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <App /> */}
     {/* <App /> */}
     {/* <App /> */}
+    {/* <MyList /> */}
+    {/* <MyTable /> */}
+    <MyForm />
   </React.StrictMode>,
 )
