@@ -10,4 +10,6 @@ const Menu = {
   카페라떼: "4000",
 }
 
-export default MenuContext = createContext(Menu);
+export const MenuContext = createContext(Menu);
+
+export const OpenContext = createContext();
