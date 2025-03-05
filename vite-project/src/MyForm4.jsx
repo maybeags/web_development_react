@@ -20,7 +20,7 @@ function MyForm() {
   return(
     <form onSubmit={handleSubmit}>
       <label>First Name </label>
-      <input type="text" onChange={(event) => setFirstName(event.target.value)} value={firstName} />
+      <input type="text" onChange={event => setFirstName(event.target.value)} value={firstName} />
       <br /><br />
 
       <label>Last Name </label>
