@@ -4,6 +4,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import './App.css'
+import AddItem from './components/AddItem';
 
 export type Item = {
   product: string;
@@ -28,6 +29,7 @@ function App() {
             </Typography>
           </Toolbar>
         </AppBar>
+        <AddItem addItem={addItem} />
       </Container>
     </>
   )
