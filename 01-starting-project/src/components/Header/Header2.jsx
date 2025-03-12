@@ -1,4 +1,16 @@
-function Header() {
+// import reactImg from './assets/react-core-concepts.png';
+// 컴포넌트 분할을 하면서 경로가 바뀌었습니다.
+import './Header.css';
+import reactImg from '../../assets/react-core-concepts.png';
+
+const reactDescriptionsKor = [ '근본적인', '결정적인', '핵심적인' ];
+const reactDescriptionsEng = [ 'Fundamental', 'Crucial', 'Core' ];
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * (max));
+}
+
+function Header2() {
   const indexNum = getRandomInt(reactDescriptionsEng.length);
 
   return(
@@ -15,3 +27,5 @@ function Header() {
   </header>
   );
 }
+
+export default Header2;
