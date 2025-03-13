@@ -1,6 +1,8 @@
 // import Header from "./components/Header";
 // import 이미지변수명 from "경로";
 import Header2 from "./components/Header/Header2";
+import { CORE_CONCEPTS } from "./data";
+
 
 function CoreConcepts(props) {
   return(
@@ -13,6 +15,8 @@ function CoreConcepts(props) {
 }
 
 
+
+
 function App() {
   return (
     <div>
@@ -21,7 +25,13 @@ function App() {
         <section id="core-concepts">
           <h2>핵심 개념들 of React</h2>
           <ul>
-            <CoreConcepts image={} title={} description={} />
+            <CoreConcepts 
+              image={CORE_CONCEPTS[0].image} 
+              title={CORE_CONCEPTS[0].title} 
+              description={CORE_CONCEPTS[0].description} />
+            <CoreConcepts {...CORE_CONCEPTS[1]}/>
+            <CoreConcepts />
+            <CoreConcepts />
           </ul>
         </section>
       </main>
