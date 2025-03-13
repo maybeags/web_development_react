@@ -23,10 +23,14 @@ function App() {
         <section id="examples">
           <h2>예시들</h2>
           <menu>
-            <TabButton>Components</TabButton>
+            {/* <TabButton>Components</TabButton>
             <TabButton>JSX</TabButton>
             <TabButton>Props</TabButton>
-            <TabButton>State</TabButton>
+            <TabButton>State</TabButton> */}
+            <TabButton label='Components' />
+            <TabButton label='JSX' />
+            <TabButton label='Props' />
+            <TabButton label='State' />
           </menu>
           동적인 버튼 클릭의 결과물
         </section>
