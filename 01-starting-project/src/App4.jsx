@@ -7,7 +7,7 @@ import { EXAMPLES } from "./data_updated";
 
 function App() {
 
-  const [ selectedTopic, setSelectedTopic ] = useState('');
+  const [ selectedTopic, setSelectedTopic ] = useState();
 
   function handleSelect(selectedTopic) {
     console.log(selectedTopic);
@@ -38,7 +38,7 @@ function App() {
             <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
             <TabButton onSelect={() => handleSelect('state')}>State</TabButton>
           </menu>
-          {selectedTopic === '' ? <h3>버튼을 클릭하세요</h3> :
+          {selectedTopic === undefined ? <h3>버튼을 클릭하세요</h3> :
             <div id="tab-content">
             <h3>{EXAMPLES[selectedTopic]['title']}</h3>
             <p>{EXAMPLES[selectedTopic].description}</p>
@@ -47,11 +47,7 @@ function App() {
               {EXAMPLES[selectedTopic].code}
               </code>
             </pre>
-          </div> }
-          
-
-
-          
+          </div> }          
         </section>
       </main>
     </div>
