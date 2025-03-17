@@ -39,13 +39,10 @@ const KPopContext = createContext();
 
 // Provider 컴포넌트를 리턴하는 KPopContextProvider를 생성
 const KPopContextProvider = ({children}) => {
-  const [playList, setPlaylist] = useState(data);
+  const [playlist, setPlaylist] = useState(data);
 
   return (
-    // <KPopContext.Provider value={{data, playList, setPlaylist}}>
-    //   {children}
-    // </KPopContext.Provider>
-    <KPopContext.Provider value={{data, playList, setPlaylist}}>
+    <KPopContext.Provider value={{data, playlist, setPlaylist}}>
       {children}
     </KPopContext.Provider>
   );
