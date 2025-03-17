@@ -1,5 +1,3 @@
-import React from "react";
-
 function Button({ data, setPlaylist, filterType, children }) {
   const handleClick = () => {
     let result = [...data];
