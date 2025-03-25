@@ -1,8 +1,12 @@
+import { Link } from "react-router-dom";
+
 function Movie({ id, coverImg, title, summary, genres }) {
   return (
     <div>
       <img src={coverImg} alt={title} />
-      <a href="/"><h2>{title}</h2></a>
+      <h2>
+        <Link to={`/moive/${id}`}>{title}</Link>
+      </h2>
       <p>{summary}</p>
       <ul>
         {genres.map((genre) => (<li key={genre}>{genre}</li>))}
