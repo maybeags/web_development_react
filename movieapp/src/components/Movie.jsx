@@ -2,7 +2,7 @@ function Movie({ id, coverImg, title, summary, genres }) {
   return (
     <div>
       <img src={coverImg} alt={title} />
-      <h2>{title}</h2>
+      <a href="/"><h2>{title}</h2></a>
       <p>{summary}</p>
       <ul>
         {genres.map((genre) => (<li key={genre}>{genre}</li>))}
@@ -12,3 +12,5 @@ function Movie({ id, coverImg, title, summary, genres }) {
 }
 
 export default Movie;
+
+// https://yts.mx/api/v2/movie_details.json?movie_id=${id}
