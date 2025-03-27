@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import Movie from "../components/Movie";
-import "./Home.css";
 
-export default function Home() {
+function Home() {
   const [ loading, setLoading ] = useState(true);
   const [ movies, setMovies ] = useState([]);
 
@@ -17,14 +16,14 @@ export default function Home() {
 
   useEffect(() => {
     getMovies();
-  }, [])
+  }, []);
 
   return(
-    <div className="home-container">
-      { loading ? (
-        <h1 className="home-loading">로딩 중 ... 🏍</h1>
-      ) : (
-        <div className="movie-grid">
+    <div>
+      {loading ? (
+        <h1>Loading...</h1>
+        ) : (
+          <div>
           {movies.map((movie) => (
             <Movie 
               key={movie.id}
@@ -35,8 +34,10 @@ export default function Home() {
               genres={movie.genres}
             />
           ))}
-        </div>
-      )}
+          </div>
+        )}
     </div>
   );
 }
+
+export default Home;
